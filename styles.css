@@ -278,7 +278,7 @@ body::before {
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.8rem; /* Título aún más pequeño */
+        font-size: 1.2rem; /* Título aún más pequeño */
     }
 
     .counter {
