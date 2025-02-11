@@ -50,6 +50,8 @@ h1 {
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Asegura que el contenido no sobresalga */
+    word-wrap: break-word; /* Divide palabras largas si es necesario */
 }
 
 .counter:hover {
@@ -63,6 +65,7 @@ h2 {
     margin-bottom: 10px;
     font-weight: bold;
     letter-spacing: 1px;
+    word-wrap: break-word; /* Divide palabras largas si es necesario */
 }
 
 #elapsed-time-met,
@@ -73,6 +76,7 @@ h2 {
     color: #333;
     letter-spacing: 1px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word; /* Divide palabras largas si es necesario */
 }
 
 .phrase-container {
@@ -90,6 +94,7 @@ h2 {
     position: relative;
     z-index: 1;
     animation: fadeIn 5s infinite alternate;
+    word-wrap: break-word; /* Divide palabras largas si es necesario */
 }
 
 /* Animación de fade-in para las frases */
