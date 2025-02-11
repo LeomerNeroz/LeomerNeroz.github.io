@@ -1,0 +1,224 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #f9e3e3, #ffe6e6);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Evita barras de desplazamiento innecesarias */
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: #e74c3c;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.counters {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.counter {
+    background: linear-gradient(135deg, #fff0f0, #fff8f8);
+    padding: 20px;
+    border-radius: 15px;
+    width: 30%;
+    margin: 10px;
+    box-sizing: border-box;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.counter:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: #e74c3c;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#elapsed-time-met,
+#elapsed-time-couple,
+#countdown {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.phrase-container {
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#phrase {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 5s infinite alternate;
+}
+
+/* Animación de fade-in para las frases */
+@keyframes fadeIn {
+    0% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Corazones flotantes */
+.heart {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #ff69b4; /* Rosa pastel */
+    transform: rotate(-45deg);
+    animation: float 3s infinite ease-in-out;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #ff69b4; /* Rosa pastel */
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -12px;
+    left: 0;
+}
+
+.heart::after {
+    left: 12px;
+    bottom: 0;
+}
+
+/* Corazones pequeños flotantes */
+.heart-small {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #ff69b4; /* Rosa pastel */
+    transform: rotate(-45deg);
+    border-radius: 50%;
+    animation: float 5s infinite ease-in-out;
+}
+
+.heart-small::before,
+.heart-small::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #ff69b4; /* Rosa pastel */
+    border-radius: 50%;
+}
+
+.heart-small::before {
+    top: -7px;
+    left: 0;
+}
+
+.heart-small::after {
+    left: 7px;
+    bottom: 0;
+}
+
+.heart-small:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.heart-small:nth-child(2) {
+    top: 30%;
+    right: 10%;
+    animation-delay: 1s;
+}
+
+.heart-small:nth-child(3) {
+    bottom: 20%;
+    left: 15%;
+    animation-delay: 2s;
+}
+
+.heart-small:nth-child(4) {
+    bottom: 10%;
+    right: 25%;
+    animation-delay: 3s;
+}
+
+/* Animación de flotación */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(-45deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+    100% {
+        transform: translateY(0) rotate(-45deg);
+    }
+}
+
+/* Partículas en el fondo */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 182, 193, 0.3) 10%, transparent 10.01%);
+    background-size: 50px 50px;
+    z-index: -1;
+    animation: particles 10s linear infinite;
+}
+
+@keyframes particles {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(25px, 25px);
+    }
+}

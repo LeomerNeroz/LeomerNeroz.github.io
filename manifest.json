@@ -1,0 +1,21 @@
+{
+    "short_name": "Cuenta Regresiva",
+    "name": "Cuenta Regresiva de Amor",
+    "description": "Una cuenta regresiva romántica para celebrar momentos especiales.",
+    "icons": [
+      {
+        "src": "icons/icon-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "icons/icon-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#f9e3e3",
+    "theme_color": "#ffe6e6"
+  }
