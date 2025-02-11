@@ -14,11 +14,11 @@ body {
 .container {
     text-align: center;
     background: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
-    padding: 30px;
+    padding: 20px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     max-width: 800px;
-    width: 90%;
+    width: 95%; /* Ajusta el ancho para pantallas pequeñas */
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -36,7 +36,7 @@ h1 {
 .counters {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que los contadores se apilen en pantallas pequeñas */
     margin: 20px 0;
 }
 
@@ -44,7 +44,7 @@ h1 {
     background: linear-gradient(135deg, #fff0f0, #fff8f8);
     padding: 20px;
     border-radius: 15px;
-    width: 30%;
+    width: 30%; /* Para pantallas grandes */
     margin: 10px;
     box-sizing: border-box;
     position: relative;
@@ -220,5 +220,99 @@ body::before {
     }
     100% {
         transform: translate(25px, 25px);
+    }
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Reduce el tamaño del título */
+    }
+
+    .counter {
+        width: 100%; /* Los contadores ocupan todo el ancho */
+        padding: 15px; /* Reduce el padding */
+    }
+
+    h2 {
+        font-size: 1.1rem; /* Reduce el tamaño del subtítulo */
+    }
+
+    #elapsed-time-met,
+    #elapsed-time-couple,
+    #countdown {
+        font-size: 1rem; /* Reduce el tamaño del texto de los contadores */
+    }
+
+    #phrase {
+        font-size: 1rem; /* Reduce el tamaño de la frase */
+    }
+
+    .heart {
+        width: 20px;
+        height: 20px;
+    }
+
+    .heart::before,
+    .heart::after {
+        width: 20px;
+        height: 20px;
+    }
+
+    .heart-small {
+        width: 10px;
+        height: 10px;
+    }
+
+    .heart-small::before,
+    .heart-small::after {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem; /* Título aún más pequeño */
+    }
+
+    .counter {
+        padding: 10px; /* Padding más pequeño */
+    }
+
+    h2 {
+        font-size: 1rem; /* Subtítulo aún más pequeño */
+    }
+
+    #elapsed-time-met,
+    #elapsed-time-couple,
+    #countdown {
+        font-size: 0.9rem; /* Texto de los contadores más pequeño */
+    }
+
+    #phrase {
+        font-size: 0.9rem; /* Frase aún más pequeña */
+    }
+
+    .heart {
+        width: 15px;
+        height: 15px;
+    }
+
+    .heart::before,
+    .heart::after {
+        width: 15px;
+        height: 15px;
+    }
+
+    .heart-small {
+        width: 8px;
+        height: 8px;
+    }
+
+    .heart-small::before,
+    .heart-small::after {
+        width: 8px;
+        height: 8px;
     }
 }
